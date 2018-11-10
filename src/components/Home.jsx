@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Scene from './Scene.jsx';
+import Header from './Header.jsx';
 
 export default class HomePage extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ export default class HomePage extends React.Component {
   render() {
     return (
         <div>
-          <h1>hiiii</h1>
+          <Header/>
+          <Scene/>
         </div>
     );
   }
