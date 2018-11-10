@@ -1,0 +1,38 @@
+/***** HOMEPAGE HEADER STYLES *****/
+
+#header {
+  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar-item {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-brand:focus, .navbar-brand:hover, .nav-item:focus, .nav-item:hover{
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  #header {
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-brand, .navbar-item {
+    color: rgba(255, 255, 255, 1);
+  }
+  .navbar-brand:focus, .navbar-brand:hover, .nav-item:focus, .nav-item:hover {
+    color: #fff;
+  }
+}

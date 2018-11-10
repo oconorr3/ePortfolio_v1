@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import HomePage from './Home.jsx';
 
+import '../styles/App.css';
+
 export default class App extends React.Component {
 
   componentDidCatch(error, info) {
