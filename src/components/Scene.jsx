@@ -39,7 +39,8 @@ export default class Scene extends React.Component {
     this.geometry = new THREE.BoxGeometry(1, 1, 1);
     this.material = new THREE.MeshBasicMaterial({ color: '#433F81' });
     this.cube = new THREE.Mesh(this.geometry, this.material);
-
+    this.cube.position.y = 2;
+    this.cube.position.x = 2;
     this.updateSceneDimensions();
     window.addEventListener('resize', this.updateSceneDimensions);
 
