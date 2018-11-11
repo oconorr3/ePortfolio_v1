@@ -2,6 +2,10 @@ import React from 'react';
 import Scene from './Scene.jsx';
 import Header from './Header.jsx';
 
+import AboutModal from './Modals/AboutModal.jsx';
+import ProjectsModal from './Modals/ProjectsModal.jsx';
+import ContactModal from './Modals/ContactModal.jsx';
+
 import '../styles/App.css';
 
 export default class App extends React.Component {
@@ -68,6 +72,10 @@ export default class App extends React.Component {
   }
 
   render() {
+    let aboutModalClose = () => { console.log('about modal close event') };
+    let projectsModalClose = () => { console.log('projects modal close event') };
+    let contactModalClose = () => { console.log('contact modal close event') };
+
     return (
         <div>
           <Header
@@ -77,6 +85,9 @@ export default class App extends React.Component {
             onContactClicked={this.onContactClicked}
             {...this.state}/>
           <Scene/>
+          <AboutModal show={this.state.showAboutModal} onHide={aboutModalClose}/>
+          <ProjectsModal show={this.state.showProjectsModal} onHide={projectsModalClose}/>
+          <ContactModal show={this.state.showContactModal} onHide={contactModalClose}/>
         </div>
     );
   }
