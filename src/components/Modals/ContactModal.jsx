@@ -20,6 +20,7 @@ export default class ContactModal extends React.Component {
       <Modal
         {...this.props}
         dialogClassName='custom-modal'
+        backdrop={false}
         >
         <Modal.Body>
           <h4 className='modal-title'>Contact</h4>
