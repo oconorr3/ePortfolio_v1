@@ -9,6 +9,7 @@ export default class Scene extends React.Component {
 
     //this.state = { width: 0, height: 0 };
 
+    this.image = 'background.jpg';
     //declare three js stuff for the scene
     this.scene = null;//new THREE.Scene();
     this.camera = null;//new THREE.PerspectiveCamera(75, this.state.sceneWidth / this.state.sceneWidth, 0.1, 1000);
@@ -16,6 +17,7 @@ export default class Scene extends React.Component {
     this.geometry = null;//new THREE.BoxGeometry(1, 1, 1);
     this.material = null;//new THREE.MeshBasicMaterial({ color: '#433F81' });
     this.cube = null;//new THREE.Mesh(this.geometry, this.material);
+    this.loader = null;
 
     //set up bindings
     this.start = this.start.bind(this);
@@ -35,19 +37,24 @@ export default class Scene extends React.Component {
       0.1,
       1000
     );
+
+    let texture = new THREE.TextureLoader().load( this.image );
+
     this.renderer = new THREE.WebGLRenderer({ antialias: true });;
     this.geometry = new THREE.BoxGeometry(1, 1, 1);
-    this.material = new THREE.MeshBasicMaterial({ color: '#433F81' });
+    this.material = new THREE.MeshBasicMaterial({ map: texture });
     this.cube = new THREE.Mesh(this.geometry, this.material);
-    this.cube.position.y = 2;
-    this.cube.position.x = 2;
+    //this.cube.position.y = 2;
+    //this.cube.position.x = 2;
     this.updateSceneDimensions();
     window.addEventListener('resize', this.updateSceneDimensions);
 
 
+    this.scene.add( new THREE.AmbientLight( 0x222222 ) );
 
     //do inital config for three js sceneWidth
     this.camera.position.z = 4;
+
     this.scene.add(this.cube);
     this.renderer.setClearColor('#000000');
     this.renderer.setSize(window.innerWidth, window.innerHeight);
