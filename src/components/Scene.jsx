@@ -19,6 +19,8 @@ export default class Scene extends React.Component {
     this.cube = null;//new THREE.Mesh(this.geometry, this.material);
     this.loader = null;
 
+
+    
     //set up bindings
     this.start = this.start.bind(this);
     this.stop = this.stop.bind(this);
@@ -29,6 +31,8 @@ export default class Scene extends React.Component {
 
   componentDidMount() {
 
+
+
     //Init three js stuff for the scene
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
@@ -37,6 +41,7 @@ export default class Scene extends React.Component {
       0.1,
       1000
     );
+
 
     let texture = new THREE.TextureLoader().load( this.image );
 
@@ -53,7 +58,7 @@ export default class Scene extends React.Component {
     this.scene.add( new THREE.AmbientLight( 0x222222 ) );
 
     //do inital config for three js sceneWidth
-    this.camera.position.z = 4;
+    this.camera.position.z = 1.5;
 
     this.scene.add(this.cube);
     this.renderer.setClearColor('#000000');
@@ -87,8 +92,10 @@ export default class Scene extends React.Component {
   }
 
   animate() {
-    this.cube.rotation.x += 0.01;
+    this.cube.rotation.x += 0.005;
     this.cube.rotation.y += 0.01;
+
+    this.camera.lookAt(this.scene.position);
 
     this.renderScene();
     this.frameId = window.requestAnimationFrame(this.animate);
