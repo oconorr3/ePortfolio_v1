@@ -18,12 +18,12 @@
 
 .modal-content {
   width: 100%;
-  background-color: rgba(33, 37, 41, 0.4);
-
+  background-color: rgba(12, 20, 31, 0.4);
+  border-color: rgba(111, 195, 223, 1);
 }
 
 .modal-title{
-  color: #fff !important;
+  color: rgba(230, 255, 255, 1) !important;
   text-align: center;
   font-weight: 900;
   padding-top: 10px;
@@ -33,6 +33,6 @@
 }
 
 .modal-body {
-  color: #fff !important;
+  color: rgba(230, 255, 255, 1) !important;
   text-align: center;
 }

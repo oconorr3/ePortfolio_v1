@@ -1,5 +1,4 @@
 import React from 'react';
-import Scene from './Scene.jsx';
 import Header from './Header.jsx';
 
 import AboutModal from './Modals/AboutModal.jsx';
@@ -84,7 +83,8 @@ export default class App extends React.Component {
             onProjectsClicked={this.onProjectsClicked}
             onContactClicked={this.onContactClicked}
             {...this.state}/>
-          <Scene/>
+          <div id='container'/>
+
           <AboutModal show={this.state.showAboutModal} onHide={aboutModalClose}/>
           <ProjectsModal show={this.state.showProjectsModal} onHide={projectsModalClose}/>
           <ContactModal show={this.state.showContactModal} onHide={contactModalClose}/>

@@ -27,7 +27,7 @@
     "three": "^0.98.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.5",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
@@ -37,13 +37,13 @@
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
     "concurrently": "^4.0.1",
     "css-loader": "^1.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "file-loader": "^2.0.0",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
@@ -51,7 +51,7 @@
     "style-loader": "^0.23.0",
     "supervisor": "^0.12.0",
     "url-loader": "^1.1.1",
-    "webpack": "^4.25.1",
+    "webpack": "^4.32.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.3"
   }
